@@ -125,38 +125,6 @@
     .total { margin-top:22px; padding:20px; border:1px solid rgba(255,255,255,.18); border-radius:16px; background:rgba(255,255,255,.06); }
     .total span { display:block; color:#9fb4c7; font-size:13px; text-transform:uppercase; letter-spacing:.1em; }
     .total strong { display:block; margin-top:4px; font-family:"Barlow Condensed"; font-size:48px; line-height:1; }
-    .asobot { position:relative; overflow:hidden; color:white; background:var(--ink); }
-    .asobot::before { content:""; position:absolute; width:520px; height:520px; right:-180px; top:-220px; border-radius:50%; background:rgba(45,119,255,.22); filter:blur(2px); }
-    .bot-layout { position:relative; display:grid; grid-template-columns:.72fr 1.28fr; gap:22px; align-items:stretch; }
-    .bot-profile { min-height:560px; padding:34px; display:flex; flex-direction:column; border:1px solid rgba(255,255,255,.15); border-radius:var(--radius); background:linear-gradient(155deg,rgba(255,107,53,.18),rgba(255,255,255,.045)); }
-    .bot-avatar { width:112px; height:112px; border:4px solid var(--orange); border-radius:50%; object-fit:cover; object-position:66% 44%; background:#17334e; box-shadow:0 16px 36px rgba(0,0,0,.28); }
-    .bot-kicker { display:flex; align-items:center; gap:8px; margin-top:24px; color:#a9c5de; font-size:12px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; }
-    .bot-kicker::before { content:""; width:9px; height:9px; border-radius:50%; background:#5de08b; box-shadow:0 0 0 4px rgba(93,224,139,.15); }
-    .bot-profile h3 { margin-top:10px; font-size:58px; }
-    .bot-profile p { margin:18px 0 0; color:#c1d1df; }
-    .bot-disclaimer { margin-top:auto !important; padding-top:26px; color:#91a9bd !important; font-size:13px; }
-    .chat-card { min-height:560px; display:flex; flex-direction:column; border-radius:var(--radius); overflow:hidden; color:var(--ink); background:#eef3f6; box-shadow:var(--shadow); }
-    .chat-header { padding:18px 20px; display:flex; justify-content:space-between; align-items:center; gap:16px; border-bottom:1px solid #d9e1e6; background:white; }
-    .chat-header strong { display:block; }
-    .chat-header small { display:block; color:#667784; }
-    .parody-badge { flex:none; padding:6px 9px; border-radius:999px; color:#8b3517; background:#ffe2d7; font-size:11px; font-weight:800; letter-spacing:.08em; }
-    .chat-messages { height:310px; padding:22px; display:flex; flex-direction:column; gap:12px; overflow-y:auto; scroll-behavior:smooth; }
-    .message { width:max-content; max-width:82%; padding:12px 15px; border-radius:16px; white-space:pre-wrap; overflow-wrap:anywhere; font-size:15px; box-shadow:0 4px 14px rgba(6,20,36,.07); }
-    .message.bot { align-self:flex-start; border-bottom-left-radius:5px; background:white; }
-    .message.user { align-self:flex-end; border-bottom-right-radius:5px; background:var(--orange); }
-    .message.typing { display:flex; gap:5px; padding:16px 18px; }
-    .message.typing span { width:6px; height:6px; border-radius:50%; background:#7a8a96; animation:blink 1s infinite alternate; }
-    .message.typing span:nth-child(2) { animation-delay:.2s; }
-    .message.typing span:nth-child(3) { animation-delay:.4s; }
-    @keyframes blink { to { opacity:.25; transform:translateY(-2px); } }
-    .quick-prompts { padding:0 18px 14px; display:flex; gap:8px; overflow-x:auto; scrollbar-width:thin; }
-    .quick-prompt { flex:none; padding:8px 11px; border:1px solid #c9d4dc; border-radius:999px; color:var(--ink); background:white; font-size:12px; font-weight:700; cursor:pointer; }
-    .quick-prompt:hover, .quick-prompt:focus-visible { border-color:var(--orange); outline:none; }
-    .chat-form { margin-top:auto; padding:16px 18px 18px; display:flex; gap:10px; border-top:1px solid #d7e0e6; background:white; }
-    .chat-input { min-width:0; flex:1; padding:12px 14px; border:1px solid #cbd5dc; border-radius:13px; color:var(--ink); background:white; }
-    .chat-input:focus { border-color:var(--blue); outline:3px solid rgba(45,119,255,.12); }
-    .chat-send { flex:none; padding:0 18px; border:0; border-radius:13px; color:var(--ink); background:var(--orange); font-weight:800; cursor:pointer; }
-    .chat-send:hover { background:var(--orange-hot); }
     .plan { padding-bottom:110px; }
     .plan-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; counter-reset:steps; }
     .plan-step { padding:26px; min-height:210px; border-top:4px solid var(--ink); background:var(--white); counter-increment:steps; }
@@ -182,9 +150,6 @@
       .mission-item { padding:14px; }
       .mission-value { font-size:20px; }
       .section-heading, .decision { grid-template-columns:1fr; }
-      .bot-layout { grid-template-columns:1fr; }
-      .bot-profile { min-height:0; }
-      .bot-disclaimer { margin-top:24px !important; }
       .idea-card, .idea-card.featured, .idea-card.helo { grid-column:1/-1; }
       .plan-grid { grid-template-columns:1fr; }
     }
@@ -200,11 +165,6 @@
       .section-heading { gap:14px; }
       .idea-card { padding:24px; min-height:330px; }
       .panel { padding:24px; }
-      .bot-profile { padding:26px; }
-      .bot-profile h3 { font-size:48px; }
-      .chat-messages { height:340px; padding:16px; }
-      .chat-form { padding:12px; }
-      .chat-send { padding-inline:14px; }
       .footer-inner { align-items:flex-start; flex-direction:column; }
     }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior:auto; } .parachute { animation:none; } * { transition:none !important; } }
@@ -216,8 +176,7 @@
     <div class="nav-links">
       <a href="#ideje">Ideje</a>
       <a href="#odluka">Odluka</a>
-      <a href="#plan">Plan</a>
-      <a class="nav-cta" href="#asobot">Pitaj AšoBota</a>
+      <a class="nav-cta" href="#plan">Plan akcije</a>
     </div>
   </nav>
 
@@ -317,44 +276,6 @@
       </div>
     </section>
 
-    <section class="section asobot" id="asobot">
-      <div class="shell">
-        <div class="section-heading">
-          <h2>Pitaj AšoBota</h2>
-          <p>Pitaj ga o poklonima, cijeni, rođendanu, biciklu ili fešti. Prvo odgovara na pitanje, a tek onda ubaci malo Ašinog stila.</p>
-        </div>
-        <div class="bot-layout">
-          <aside class="bot-profile">
-            <img class="bot-avatar" src="assets/aso-hero-v2.png" alt="Portret Aše">
-            <div class="bot-kicker">Online, koliko ja znam</div>
-            <h3>AšoBot 0.40</h3>
-            <p>Kratko odgovara, puno pita i povremeno promijeni mišljenje usred iste rečenice.</p>
-            <p class="bot-disclaimer"><strong>Važno:</strong> ovo je šaljiva parodija, nije pravi Ašo. Odgovori nisu njegove stvarne izjave ni potvrđene želje. Pitanja ostaju samo u ovom pregledniku.</p>
-          </aside>
-
-          <div class="chat-card" aria-label="Razgovor s AšoBotom">
-            <div class="chat-header">
-              <div><strong>AšoBot</strong><small>Konkretni odgovori · prati kontekst</small></div>
-              <span class="parody-badge">PARODIJA</span>
-            </div>
-            <div class="chat-messages" id="bot-messages" aria-live="polite" aria-label="Poruke">
-              <div class="message bot">Di si? Kaj te zanima? 😁</div>
-            </div>
-            <div class="quick-prompts" aria-label="Brza pitanja">
-              <button class="quick-prompt" type="button">Kaj želiš za rođendan?</button>
-              <button class="quick-prompt" type="button">Padobran ili helikopter?</button>
-              <button class="quick-prompt" type="button">Koliko košta tečaj?</button>
-              <button class="quick-prompt" type="button">Bi li išao na bicikl?</button>
-            </div>
-            <form class="chat-form" id="bot-form">
-              <input class="chat-input" id="bot-input" type="text" maxlength="180" autocomplete="off" placeholder="Pitaj AšoBota…" aria-label="Pitanje za AšoBota">
-              <button class="chat-send" type="submit">Pitaj</button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section class="section plan" id="plan">
       <div class="shell">
         <div class="section-heading">
@@ -410,190 +331,6 @@
     }));
     range.addEventListener('input', render);
     render();
-
-    const botMessages = document.getElementById('bot-messages');
-    const botForm = document.getElementById('bot-form');
-    const botInput = document.getElementById('bot-input');
-    const quickPrompts = document.querySelectorAll('.quick-prompt');
-    let botBusy = false;
-
-    const normalize = text => text.toLocaleLowerCase('hr-HR')
-      .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
-      .replace(/[^a-z0-9€ ]/g, ' ').replace(/\s+/g, ' ').trim();
-    const pick = replies => replies[Math.floor(Math.random() * replies.length)];
-    let lastTopic = null;
-
-    function editDistance(a, b) {
-      const row = Array.from({length: b.length + 1}, (_, index) => index);
-      for (let i = 1; i <= a.length; i += 1) {
-        let previous = row[0];
-        row[0] = i;
-        for (let j = 1; j <= b.length; j += 1) {
-          const saved = row[j];
-          row[j] = Math.min(row[j] + 1, row[j - 1] + 1, previous + (a[i - 1] === b[j - 1] ? 0 : 1));
-          previous = saved;
-        }
-      }
-      return row[b.length];
-    }
-
-    function hasTerm(text, term) {
-      if (text.includes(term)) return true;
-      if (term.includes(' ')) return false;
-      return text.split(' ').some(word => {
-        if (term.length >= 4 && word.startsWith(term)) return true;
-        return term.length >= 5 && Math.abs(word.length - term.length) <= 1 && editDistance(word, term) <= 1;
-      });
-    }
-
-    const hasAny = (text, terms) => terms.some(term => hasTerm(text, term));
-    const topicData = {
-      gift: {
-        terms: ['poklon', 'rodendan', 'zelja', 'zelis za', 'kupiti', 'dar'],
-        answer: 'Od prijedloga na stranici AšoBot bira padobranski tečaj ili dobar survival kit. Ali to nije potvrđena Ašina želja — prvo bih diskretno provjerio bi li stvarno skočio.',
-        why: 'Jer je 40. rođendan bolji za doživljaj koji se pamti nego za još jednu stvar koja završi u ormaru.',
-        price: 'Ideje su od oko 50 € za SodaStream paket do 500 € za padobranski tečaj. Za 10 ljudi to je otprilike 5–50 € po osobi.'
-      },
-      parachute: {
-        terms: ['padobran', 'skok', 'skakati', 'avion', 'tecaj'],
-        answer: 'Padobranski tečaj mi je najjači poklon od ponuđenih: tri samostalna static-line skoka. Bi, išao… ali prvo provjerite termin i zdravstvene uvjete 😁',
-        why: 'Zato što je veliko iskustvo za veliki rođendan, a nije običan predmet. Rizik je samo da se predomislim prije polijetanja.',
-        price: 'Tečaj je naveden oko 500 €. Ako sudjeluje 10 ljudi, to je 50 € po osobi.'
-      },
-      helicopter: {
-        terms: ['helikopter', 'heli', 'panoramski', 'let iznad'],
-        answer: 'Helikopter je sigurnija i opuštenija opcija: 30 minuta iznad Zagreba, do tri putnika. A da — manje padanja, više gledanja.',
-        why: 'Jer i dalje dobiješ doživljaj i visinu, ali bez samostalnog iskakanja iz aviona.',
-        price: 'Let helikopterom je naveden od 475 €, odnosno oko 47,50 € po osobi ako vas je deset.'
-      },
-      bicycle: {
-        terms: ['bicikl', 'bike', 'voznj', 'pedal', 'ruta'],
-        answer: 'Da, bicikl i zajednička vožnja imaju smisla. To je više njegov đir nego generičan poklon. Ideš? Sam da start nije full rano.',
-        why: 'Jer već dijeli biciklističke vožnje i pita ekipu tko ide, pa je to jedna od uvjerljivijih tema.',
-        price: 'Za bicikl nema dogovorene cijene. Realnije je pokloniti opremu ili organizirati zajedničku vožnju nego naslijepo kupovati cijeli bicikl.'
-      },
-      survival: {
-        terms: ['survival', 'ruksak', 'multitool', 'oprema', 'vojni', 'takticki', 'hudica', 'jakna', 'spitka'],
-        answer: 'Survival kit je praktičan izbor: ruksak, multitool, boca, mini prva pomoć i možda hudica ili jakna. To se može složiti baš po njegovom ukusu.',
-        why: 'Jer dobije više korisnih stvari, a paket se lako personalizira i izgleda kao pravi zajednički poklon.',
-        price: 'Na stranici je okvirno računato 300 €, ali paket možete smanjiti ili proširiti prema budžetu.'
-      },
-      soda: {
-        terms: ['sodastream', 'soda', 'mjehur', 'co2', 'koncentrat'],
-        answer: 'SodaStream paket je najpraktičnija opcija: CO₂ boca i nekoliko koncentrata. Dobar dodatni poklon, ali za 40. rođendan možda premalen kao glavni.',
-        why: 'Jer znate da mu nedostaje CO₂ boca, pa nije pogađanje naslijepo.',
-        price: 'Procjena za SodaStream paket je 45–50 €, odnosno oko 5 € po osobi ako vas je deset.'
-      },
-      party: {
-        terms: ['festa', 'slavlje', 'slaviti', 'party', 'bend', 'muzika', 'glazba', 'pivo', 'izlazak'],
-        answer: 'Za feštu sam. Ako svira bend i ide ekipa, vrlo vjerojatno se pojavim — nakon kratkog “bi, ne bi” vijećanja 😁',
-        why: 'Jer su dobra ekipa i lokalna fešta očito provjeren recept. Bit će puno ljudi? Onda možda ipak idem.',
-        price: 'Za feštu nema fiksnog iznosa. Prvo dogovorite mjesto i broj ljudi pa odvojite poklon od troška proslave.'
-      },
-      gaming: {
-        terms: ['igrica', 'gaming', 'playstation', 'xbox', 'steam', 'kompjuter'],
-        answer: 'Igrice prolaze, ali za 40. rođendan bih ih stavio kao manji dodatak uz glavni poklon. Jesi budan ili si opet igrao do kasno?',
-        why: 'Jer je siguran mali poklon, ali nema isti efekt kao zajedničko iskustvo.'
-      },
-      travel: {
-        terms: ['putovanje', 'vikend', 'ceska', 'izlet', 'more', 'putovati'],
-        answer: 'Zajednički vikend ili izlet zvuči dobro, pogotovo ako se spoji s glavnim iskustvom. Sam nemojte planirati pet dana bez da prvo pitate.',
-        why: 'Jer je doživljaj s ekipom osobniji od stvari, ali termin treba unaprijed potvrditi.'
-      }
-    };
-
-    function detectTopic(text) {
-      let winner = null;
-      let bestScore = 0;
-      Object.entries(topicData).forEach(([key, data]) => {
-        const score = data.terms.reduce((sum, term) => sum + (hasTerm(text, term) ? (term.includes(' ') ? 3 : 2) : 0), 0);
-        if (score > bestScore) { winner = key; bestScore = score; }
-      });
-      return winner;
-    }
-
-    function compactSubject(text) {
-      const stopWords = new Set(['a','ali','bi','bih','da','do','i','ili','je','jel','kaj','kako','ko','li','me','mi','na','o','od','se','si','sto','su','ti','to','u','za','zasto']);
-      return text.split(' ').filter(word => word.length > 2 && !stopWords.has(word)).slice(0, 5).join(' ');
-    }
-
-    function getBotReply(question) {
-      const text = normalize(question);
-      const isWhy = hasAny(text, ['zasto', 'zbog cega']);
-      const isPrice = hasAny(text, ['koliko kosta', 'cijena', 'budget', 'budzet', 'eura', '€']);
-      const isWhen = hasAny(text, ['kad', 'datum', 'koji dan']);
-      const isWhere = hasAny(text, ['gdje', 'di je', 'kamo', 'lokacija']);
-      const isIdentity = hasAny(text, ['tko si', 'ko si', 'jesi pravi', 'pravi aso', 'bot si']);
-      let topic = detectTopic(text);
-
-      if (hasAny(text, ['bok', 'hej', 'pozdrav', 'halo', 'di si']) && text.split(' ').length <= 4) {
-        return 'Di si? Pitaj me konkretno za poklon, cijenu, padobran, bicikl ili feštu.';
-      }
-      if (hasAny(text, ['hvala', 'fala'])) return 'Ništa. Jel smo onda riješili poklon? 😁';
-      if (isIdentity) return 'Ja sam AšoBot — šaljiva parodija, ne pravi Ašo. Odgovaram prema temama sa stranice i njegovu stilu poruka.';
-      if (isWhen && hasAny(text, ['rodendan', 'slavlje', 'predaja', 'poklon'])) return 'Planirani datum predaje poklona je 22. 10. 2026. Do tada bi valjalo odlučiti prije nego bude “ništa još”.';
-      if (isWhere && hasAny(text, ['padobran', 'tecaj', 'skok'])) return 'Padobranski tečaj sa stranice je u Češkoj. Zato prije uplate treba provjeriti termin, put i zdravstvene uvjete.';
-      if (isWhere && hasAny(text, ['helikopter', 'let'])) return 'Panoramski let je iznad Zagreba.';
-      if (hasAny(text, ['koliko godina', 'kolko godina', 'star si', 'godina imas'])) return 'Četrdeset. Zato i radite cijelu ovu operaciju 😁';
-
-      if (hasTerm(text, 'padobran') && hasTerm(text, 'helikopter')) {
-        lastTopic = 'gift';
-        return 'Od ta dva biram padobran jer je upečatljiviji poklon za 40. Ako niste sigurni da bi stvarno skočio, helikopter je pametniji plan B.';
-      }
-      if (hasTerm(text, 'survival') && hasTerm(text, 'sodastream')) {
-        lastTopic = 'gift';
-        return 'Survival kit kao glavni poklon, a SodaStream samo kao mali dodatak. Tako paket djeluje osobnije i vrijednije.';
-      }
-
-      if (!topic && lastTopic && text.split(' ').length <= 5 && (isWhy || isPrice || hasAny(text, ['a to', 'sigurno', 'stvarno']))) topic = lastTopic;
-      if (topic) {
-        lastTopic = topic;
-        if (isWhy && topicData[topic].why) return topicData[topic].why;
-        if (isPrice) return topicData[topic].price || 'Za tu ideju nemam pouzdanu cijenu. Bolje prvo dogovoriti točan sadržaj pa tek onda dijeliti iznos.';
-        return topicData[topic].answer;
-      }
-
-      if (isWhen) return 'Za to nemam potvrđen datum. Ako misliš na predaju poklona, plan je 22. 10. 2026.';
-      if (isWhere) return 'Za tu ideju nemam potvrđenu lokaciju. Ako misliš na mene: u Gorici sam, koliko ja znam.';
-      const subject = compactSubject(text);
-      if (subject) return `Pitaš me za “${subject}”. Za to nemam dovoljno podataka da izmislim konkretan odgovor. Reci mi je li to poklon, izlet ili plan za feštu pa bum odgovoril preciznije.`;
-      return 'Nisam skužio pitanje. Probaj: “Koji poklon želiš?”, “Koliko košta padobran?” ili “Padobran ili helikopter?”';
-    }
-
-    function addBotMessage(text, role) {
-      const message = document.createElement('div');
-      message.className = `message ${role}`;
-      message.textContent = text;
-      botMessages.appendChild(message);
-      botMessages.scrollTop = botMessages.scrollHeight;
-      return message;
-    }
-
-    function askBot(question) {
-      const cleanQuestion = question.trim();
-      if (!cleanQuestion || botBusy) return;
-      botBusy = true;
-      addBotMessage(cleanQuestion, 'user');
-      botInput.value = '';
-      const typing = document.createElement('div');
-      typing.className = 'message bot typing';
-      typing.setAttribute('aria-label', 'AšoBot piše');
-      typing.innerHTML = '<span></span><span></span><span></span>';
-      botMessages.appendChild(typing);
-      botMessages.scrollTop = botMessages.scrollHeight;
-      window.setTimeout(() => {
-        typing.remove();
-        addBotMessage(getBotReply(cleanQuestion), 'bot');
-        botBusy = false;
-        botInput.focus();
-      }, 520);
-    }
-
-    botForm.addEventListener('submit', event => {
-      event.preventDefault();
-      askBot(botInput.value);
-    });
-    quickPrompts.forEach(button => button.addEventListener('click', () => askBot(button.textContent)));
   </script>
 </body>
 </html>
