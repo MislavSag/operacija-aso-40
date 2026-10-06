@@ -130,7 +130,7 @@
     .video-copy p { color:#b9cad9; }
     .quote { margin:28px 0 0; padding:20px; border-left:4px solid var(--orange); background:rgba(255,255,255,.05); color:#dce8f1; }
     .video-frame { aspect-ratio:16/9; border-radius:var(--radius); overflow:hidden; border:1px solid rgba(255,255,255,.18); box-shadow:var(--shadow); }
-    .video-frame iframe { width:100%; height:100%; border:0; }
+    .video-frame video { width:100%; height:100%; display:block; object-fit:cover; background:#06111d; }
     .plan { padding-bottom:110px; }
     .plan-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; counter-reset:steps; }
     .plan-step { padding:26px; min-height:210px; border-top:4px solid var(--ink); background:var(--white); counter-increment:steps; }
@@ -287,11 +287,14 @@
         <div class="video-copy">
           <p class="eyebrow">Terenski materijal</p>
           <h2>Kako to stvarno izgleda</h2>
-          <p>Static-line znači da se padobran otvara automatski nakon izlaska iz letjelice. Video prikazuje obuku irskih obrambenih snaga iz helikoptera.</p>
+          <p>Static-line znači da se padobran otvara automatski nakon izlaska iz letjelice. Za sada smo Ašu poslali u zrak u kratkoj animiranoj simulaciji.</p>
           <div class="quote">“Preživel bi, vjeruj mi.”<br><strong>— optimistična procjena iz grupe</strong></div>
         </div>
         <div class="video-frame">
-          <iframe src="https://www.youtube-nocookie.com/embed/srS8Be6VlTA" title="Static line parachute training" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <video autoplay muted loop playsinline controls preload="metadata" poster="assets/aso-hero-v2.png" aria-label="Animirana simulacija Ašinog padobranskog skoka">
+            <source src="assets/aso-airborne-animated.mp4" type="video/mp4">
+            Tvoj preglednik ne podržava HTML5 video.
+          </video>
         </div>
       </div>
     </section>
