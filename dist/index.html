@@ -125,6 +125,38 @@
     .total { margin-top:22px; padding:20px; border:1px solid rgba(255,255,255,.18); border-radius:16px; background:rgba(255,255,255,.06); }
     .total span { display:block; color:#9fb4c7; font-size:13px; text-transform:uppercase; letter-spacing:.1em; }
     .total strong { display:block; margin-top:4px; font-family:"Barlow Condensed"; font-size:48px; line-height:1; }
+    .asobot { position:relative; overflow:hidden; color:white; background:var(--ink); }
+    .asobot::before { content:""; position:absolute; width:520px; height:520px; right:-180px; top:-220px; border-radius:50%; background:rgba(45,119,255,.22); filter:blur(2px); }
+    .bot-layout { position:relative; display:grid; grid-template-columns:.72fr 1.28fr; gap:22px; align-items:stretch; }
+    .bot-profile { min-height:560px; padding:34px; display:flex; flex-direction:column; border:1px solid rgba(255,255,255,.15); border-radius:var(--radius); background:linear-gradient(155deg,rgba(255,107,53,.18),rgba(255,255,255,.045)); }
+    .bot-avatar { width:112px; height:112px; border:4px solid var(--orange); border-radius:50%; object-fit:cover; object-position:66% 44%; background:#17334e; box-shadow:0 16px 36px rgba(0,0,0,.28); }
+    .bot-kicker { display:flex; align-items:center; gap:8px; margin-top:24px; color:#a9c5de; font-size:12px; font-weight:800; letter-spacing:.12em; text-transform:uppercase; }
+    .bot-kicker::before { content:""; width:9px; height:9px; border-radius:50%; background:#5de08b; box-shadow:0 0 0 4px rgba(93,224,139,.15); }
+    .bot-profile h3 { margin-top:10px; font-size:58px; }
+    .bot-profile p { margin:18px 0 0; color:#c1d1df; }
+    .bot-disclaimer { margin-top:auto !important; padding-top:26px; color:#91a9bd !important; font-size:13px; }
+    .chat-card { min-height:560px; display:flex; flex-direction:column; border-radius:var(--radius); overflow:hidden; color:var(--ink); background:#eef3f6; box-shadow:var(--shadow); }
+    .chat-header { padding:18px 20px; display:flex; justify-content:space-between; align-items:center; gap:16px; border-bottom:1px solid #d9e1e6; background:white; }
+    .chat-header strong { display:block; }
+    .chat-header small { display:block; color:#667784; }
+    .parody-badge { flex:none; padding:6px 9px; border-radius:999px; color:#8b3517; background:#ffe2d7; font-size:11px; font-weight:800; letter-spacing:.08em; }
+    .chat-messages { height:310px; padding:22px; display:flex; flex-direction:column; gap:12px; overflow-y:auto; scroll-behavior:smooth; }
+    .message { width:max-content; max-width:82%; padding:12px 15px; border-radius:16px; white-space:pre-wrap; overflow-wrap:anywhere; font-size:15px; box-shadow:0 4px 14px rgba(6,20,36,.07); }
+    .message.bot { align-self:flex-start; border-bottom-left-radius:5px; background:white; }
+    .message.user { align-self:flex-end; border-bottom-right-radius:5px; background:var(--orange); }
+    .message.typing { display:flex; gap:5px; padding:16px 18px; }
+    .message.typing span { width:6px; height:6px; border-radius:50%; background:#7a8a96; animation:blink 1s infinite alternate; }
+    .message.typing span:nth-child(2) { animation-delay:.2s; }
+    .message.typing span:nth-child(3) { animation-delay:.4s; }
+    @keyframes blink { to { opacity:.25; transform:translateY(-2px); } }
+    .quick-prompts { padding:0 18px 14px; display:flex; gap:8px; overflow-x:auto; scrollbar-width:thin; }
+    .quick-prompt { flex:none; padding:8px 11px; border:1px solid #c9d4dc; border-radius:999px; color:var(--ink); background:white; font-size:12px; font-weight:700; cursor:pointer; }
+    .quick-prompt:hover, .quick-prompt:focus-visible { border-color:var(--orange); outline:none; }
+    .chat-form { margin-top:auto; padding:16px 18px 18px; display:flex; gap:10px; border-top:1px solid #d7e0e6; background:white; }
+    .chat-input { min-width:0; flex:1; padding:12px 14px; border:1px solid #cbd5dc; border-radius:13px; color:var(--ink); background:white; }
+    .chat-input:focus { border-color:var(--blue); outline:3px solid rgba(45,119,255,.12); }
+    .chat-send { flex:none; padding:0 18px; border:0; border-radius:13px; color:var(--ink); background:var(--orange); font-weight:800; cursor:pointer; }
+    .chat-send:hover { background:var(--orange-hot); }
     .plan { padding-bottom:110px; }
     .plan-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; counter-reset:steps; }
     .plan-step { padding:26px; min-height:210px; border-top:4px solid var(--ink); background:var(--white); counter-increment:steps; }
@@ -150,6 +182,9 @@
       .mission-item { padding:14px; }
       .mission-value { font-size:20px; }
       .section-heading, .decision { grid-template-columns:1fr; }
+      .bot-layout { grid-template-columns:1fr; }
+      .bot-profile { min-height:0; }
+      .bot-disclaimer { margin-top:24px !important; }
       .idea-card, .idea-card.featured, .idea-card.helo { grid-column:1/-1; }
       .plan-grid { grid-template-columns:1fr; }
     }
@@ -165,6 +200,11 @@
       .section-heading { gap:14px; }
       .idea-card { padding:24px; min-height:330px; }
       .panel { padding:24px; }
+      .bot-profile { padding:26px; }
+      .bot-profile h3 { font-size:48px; }
+      .chat-messages { height:340px; padding:16px; }
+      .chat-form { padding:12px; }
+      .chat-send { padding-inline:14px; }
       .footer-inner { align-items:flex-start; flex-direction:column; }
     }
     @media (prefers-reduced-motion: reduce) { html { scroll-behavior:auto; } .parachute { animation:none; } * { transition:none !important; } }
@@ -176,7 +216,8 @@
     <div class="nav-links">
       <a href="#ideje">Ideje</a>
       <a href="#odluka">Odluka</a>
-      <a class="nav-cta" href="#plan">Plan akcije</a>
+      <a href="#plan">Plan</a>
+      <a class="nav-cta" href="#asobot">Pitaj AšoBota</a>
     </div>
   </nav>
 
@@ -276,6 +317,44 @@
       </div>
     </section>
 
+    <section class="section asobot" id="asobot">
+      <div class="shell">
+        <div class="section-heading">
+          <h2>Pitaj AšoBota</h2>
+          <p>Rođendanska parodija složena prema njegovu kratkom, spontanom stilu. Pitaj ga što želi — ako se u međuvremenu ne predomisli.</p>
+        </div>
+        <div class="bot-layout">
+          <aside class="bot-profile">
+            <img class="bot-avatar" src="assets/aso-hero-v2.png" alt="Portret Aše">
+            <div class="bot-kicker">Online, koliko ja znam</div>
+            <h3>AšoBot 0.40</h3>
+            <p>Kratko odgovara, puno pita i povremeno promijeni mišljenje usred iste rečenice.</p>
+            <p class="bot-disclaimer"><strong>Važno:</strong> ovo je šaljiva parodija, nije pravi Ašo. Odgovori nisu njegove stvarne izjave ni potvrđene želje. Pitanja ostaju samo u ovom pregledniku.</p>
+          </aside>
+
+          <div class="chat-card" aria-label="Razgovor s AšoBotom">
+            <div class="chat-header">
+              <div><strong>AšoBot</strong><small>Lokalni rođendanski prototip</small></div>
+              <span class="parody-badge">PARODIJA</span>
+            </div>
+            <div class="chat-messages" id="bot-messages" aria-live="polite" aria-label="Poruke">
+              <div class="message bot">Di si? Kaj te zanima? 😁</div>
+            </div>
+            <div class="quick-prompts" aria-label="Brza pitanja">
+              <button class="quick-prompt" type="button">Kaj želiš za rođendan?</button>
+              <button class="quick-prompt" type="button">Padobran ili helikopter?</button>
+              <button class="quick-prompt" type="button">Bicikl?</button>
+              <button class="quick-prompt" type="button">Ideš na feštu?</button>
+            </div>
+            <form class="chat-form" id="bot-form">
+              <input class="chat-input" id="bot-input" type="text" maxlength="180" autocomplete="off" placeholder="Pitaj AšoBota…" aria-label="Pitanje za AšoBota">
+              <button class="chat-send" type="submit">Pitaj</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section plan" id="plan">
       <div class="shell">
         <div class="section-heading">
@@ -331,6 +410,114 @@
     }));
     range.addEventListener('input', render);
     render();
+
+    const botMessages = document.getElementById('bot-messages');
+    const botForm = document.getElementById('bot-form');
+    const botInput = document.getElementById('bot-input');
+    const quickPrompts = document.querySelectorAll('.quick-prompt');
+    let botBusy = false;
+
+    const normalize = text => text.toLocaleLowerCase('hr-HR')
+      .normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    const pick = replies => replies[Math.floor(Math.random() * replies.length)];
+    const includesAny = (text, terms) => terms.some(term => text.includes(term));
+
+    function getBotReply(question) {
+      const text = normalize(question);
+      if (includesAny(text, ['rodendan', 'poklon', 'zelis', 'htio', 'htjel'])) {
+        return pick([
+          'Ništa još, koliko ja znam. Možda bicikl, neka fešta… bi, išao, ne bi išao 😁',
+          'Poklon? A da… nekaj praktično. Ili nekaj s visine. Kaj vi mislite?',
+          'Razmišljam. Ne bum sad odmah odlučil, ipak je tek 40.'
+        ]);
+      }
+      if (includesAny(text, ['padobran', 'skok', 'avion'])) {
+        return pick([
+          'Padobran? Bi, išao, ne bi išao. Jel ima prvo proba na zemlji?',
+          'Tri solo skoka? A da… možda se ipak predomislim 😁',
+          'Može. Sam kaj je plan B ako ne bum išao?'
+        ]);
+      }
+      if (includesAny(text, ['helikopter', 'heli', 'let'])) {
+        return pick([
+          'Helikopter zvuči pametno. Ne bum odmah rekao ne 😁',
+          '30 minuta iznad Zagreba? Idemo. Ili prvo nekaj pojesti?',
+          'A da. Manje padanja, više gledanja.'
+        ]);
+      }
+      if (includesAny(text, ['bicikl', 'bike', 'voznj', 'pedal'])) {
+        return pick([
+          'Bicikl može. Ideš? Sam da nije full rano.',
+          'Ideš? Ja razmišljam da ipak odem.',
+          'Može ruta. Kaj ne idemo prvo kod Rizve?'
+        ]);
+      }
+      if (includesAny(text, ['festa', 'bend', 'party', 'slav', 'piva', 'pivo'])) {
+        return pick([
+          'Fešta? Luna bend svira? Bit će puno ljudi? A da, možda ipak idem.',
+          'Jel bi išao? Ja bi. Mislim. Ili ne bi.',
+          'Selska fešta? Predomislila se ipak. Onda idem i ja 😁'
+        ]);
+      }
+      if (includesAny(text, ['sodastream', 'soda', 'slag'])) {
+        return pick([
+          'SodaStream? Ke to je? Kakav šlag?',
+          'Jedan šlag? A jel postoji cvajšlag?',
+          'Praktično. Sam nek ima dosta mjehurića.'
+        ]);
+      }
+      if (includesAny(text, ['spavas', 'budan', 'igrice', 'igric'])) {
+        return 'Jesi budan? Opet si igrao igrice do kasno?';
+      }
+      if (includesAny(text, ['gdje', 'di si', 'kamo', 'gorica'])) {
+        return 'U Gorici sam. Di si ti?';
+      }
+      if (includesAny(text, ['bok', 'hej', 'pozdrav', 'halo'])) {
+        return pick(['Di si?', 'A da, bok 😁', 'Jesi budan?']);
+      }
+      return pick([
+        'A da… kaj ti misliš?',
+        'Ništa još, koliko ja znam.',
+        'Razmišljam. Bi, ne bi… javim 😁',
+        'Ke to je? Kakav šlag?',
+        'Idemo. Ili možda ipak ne bum.'
+      ]);
+    }
+
+    function addBotMessage(text, role) {
+      const message = document.createElement('div');
+      message.className = `message ${role}`;
+      message.textContent = text;
+      botMessages.appendChild(message);
+      botMessages.scrollTop = botMessages.scrollHeight;
+      return message;
+    }
+
+    function askBot(question) {
+      const cleanQuestion = question.trim();
+      if (!cleanQuestion || botBusy) return;
+      botBusy = true;
+      addBotMessage(cleanQuestion, 'user');
+      botInput.value = '';
+      const typing = document.createElement('div');
+      typing.className = 'message bot typing';
+      typing.setAttribute('aria-label', 'AšoBot piše');
+      typing.innerHTML = '<span></span><span></span><span></span>';
+      botMessages.appendChild(typing);
+      botMessages.scrollTop = botMessages.scrollHeight;
+      window.setTimeout(() => {
+        typing.remove();
+        addBotMessage(getBotReply(cleanQuestion), 'bot');
+        botBusy = false;
+        botInput.focus();
+      }, 520);
+    }
+
+    botForm.addEventListener('submit', event => {
+      event.preventDefault();
+      askBot(botInput.value);
+    });
+    quickPrompts.forEach(button => button.addEventListener('click', () => askBot(button.textContent)));
   </script>
 </body>
 </html>
